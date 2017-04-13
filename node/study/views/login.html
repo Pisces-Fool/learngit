@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>login page</title>
+</head>
+<body>
+	<h1>ni hao a , shi jie ! </h1>
+	<h1>Welcome !</h1>
+	<!-- src 里面的内容是路径，全部是loaclhost：8000/showimg  去router里找showimg方法 -->
+	<img src="./showimg" alt=""><br/>
+	收到参数：email是：{email}<br/>
+	密码是：{password}
+
+	<form action="./login" method="post">
+		<table align="center">
+			<tr>
+				<td>email</td>
+				<td><input type="text" name="email"></td>
+			</tr>
+			<tr>
+				<td>password</td>
+				<td><input type="password" name="password"></td>
+			</tr>
+			<tr>
+				<td align="center"><input type="submit" value="login"></td>
+			</tr>
+		</table>
+	</form>
+</body>
+</html>

@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="Content-Type" content="text/html">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0">
+	<title>唯品会demo</title>
+	<style type="text/css">
+		html,body{
+			width: 100%;
+			padding: 0;
+			margin: 0;
+			height: 100%;
+			font-family: "Microsoft Yahei";
+			font-size: 14px;
+		}
+		#header{
+			width: 100%;
+			height: 43px;
+			background-color: #fbfbfa;
+			border-bottom: 1px solid #efefef;
+		}
+		ul{
+			list-style: none;
+			padding: 0;
+			margin: 0;
+		}
+		a{
+			text-decoration: none;
+			padding: 0;
+			margin: 0;
+		}
+		#header ul{
+			width: 160px;
+			display: block;
+			height: 26px;
+			margin-left: 50%;
+			left: -80px;
+			top: 7px;
+			position: absolute;
+		}
+		#header ul li{
+			float: left;
+		}
+		#header ul li:nth-child(1) a{
+			border-top-left-radius: 5px;
+			border-bottom-left-radius: 5px;
+		}
+		#header ul li:nth-child(2) a{
+			border-left: none;
+			border-top-right-radius: 5px;
+			border-bottom-right-radius: 5px;
+		}
+		#header ul li.actived a{
+			background-color: #222;
+			color: #fff;
+		}
+		#header ul li a{
+			display: block;
+			width: 78px;
+			height: 100%;
+			text-align: center;
+			line-height: 26px;
+			border: 1px solid #000;
+			color: #000;
+
+		}
+		.left{
+			width: 25%;
+			float: left;
+		}
+		.left ul{
+			width: 100%;
+		}
+		.left ul li{
+			height: 52px;
+			border-bottom: 1px solid #fff;
+			background-color: #f4f4f4;
+			
+		}
+		.left ul li a{
+			display: block;
+			height: 100%;
+			line-height: 52px;
+			text-align: center;
+			color: #555;
+			margin-left: 4px;
+		}
+		.left ul li.selected{
+			background-color: #D611D4;
+			color: #000;
+		}
+		.left ul li.selected a{
+			background-color: white;
+			color: #D61111;
+		}
+		.right{
+			width:75%;
+			float: left;
+			margin-left: 25%;
+		}
+	</style>
+</head>
+<body>
+	<header id="header">
+		<ul>
+	 		<li class="actived"> <a href="#">分类</a></li>
+	 		<li> <a href="#">品牌</a></li>
+		</ul>
+	</header>
+	<div class="left">
+		<ul>
+			<li class="selected"><a href="#">运动1</a></li>
+			<li><a href="#">运动2</a></li>
+			<li><a href="#">运动3</a></li>
+			<li><a href="#">运动4</a></li>
+			<li><a href="#">运动5</a></li>
+			<li><a href="#">运动6</a></li>
+			<li><a href="#">运动7</a></li>
+			<li><a href="#">运动8</a></li>
+			<li><a href="#">运动9</a></li>
+			<li><a href="#">运动10</a></li>
+			<li><a href="#">运动11</a></li>
+		</ul>
+	</div>
+	<div class="right">
+	  <ul>
+		<li><a href="#"></a></li>
+		<li><a href="#"></a></li>
+		<li><a href="#"></a></li>
+		<li><a href="#"></a></li>
+		<li><a href="#"></a></li>
+		<li><a href="#"></a></li>
+		<li><a href="#"></a></li>
+		<li><a href="#"></a></li>
+		<li><a href="#"></a></li>
+		<li><a href="#"></a></li>
+		<li><a href="#"></a></li>
+	  </ul>
+	</div>
+	<script src="http://libs.baidu.com/jquery/1.9.1/jquery.min.js"></script>
+	<script type="text/javascript">
+		$('#header li').click(function(){
+			$(this).addClass('actived').siblings().removeClass('actived');
+		})
+		$('.left li').click(function(){
+			$(this).addClass('selected').siblings().removeClass('selected');
+		});
+	</script>
+</body>
+</html>

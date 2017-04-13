@@ -1,0 +1,147 @@
+/*@mixin tool-item($pos,$hPos){
+	background-position: 0 $pos;
+	&:hover{
+		background-position:0 $hPos;
+	}
+}
+$toolbar-width:52px;
+.toolbar{
+	position: fixed;
+	left: 50%;
+	bottom: 5px;
+	margin-left: -$toolbar-width / 2;
+}
+.tool-item,.tool-layer{
+	background-image: url(../img/toolbar.png);
+	background-repeat: no-repeat;
+}
+.tool-item{
+	position: relative;;
+	display: block;
+	width: $toolbar-width;
+	height: $toolbar-width;
+	margin-top: 1px;
+	@include transition(background-position 0.5s);
+	&:hover{
+		.tool-layer{
+			@include opacity(1);
+			@include scale(1);
+		}
+	}
+}
+.weixin{
+	@include tool-item(-798px,-860px);
+	.tool-layer{
+		height: 212px;
+		background-position:  0 0 ;
+	}
+}
+.suggestion{
+	@include tool-item(-426px,-488px);
+}
+.download{
+	@include tool-item(-550px,-612px);
+	.tool-layer{
+		height: 194px;
+		background-position:  0 -222px;
+	}
+}
+.backtop{
+	@include tool-item(-674px,-736px);
+}
+.tool-layer{
+	position: absolute;
+	right: $toolbar-width - 6;
+	bottom: -10px;
+	width: 172px;
+	@include opacity(0);
+	@include transform-origin(95% 95%);
+	@include scale(0.001);
+	@include transition(all 0.5s);
+}
+*/
+
+
+
+$toolbar-width:52px;
+.toolbar{
+	position: fixed;
+	left: 50%;
+	bottom: 5px;
+	margin-left: -$toolbar-width / 2;
+}
+.tool-item{
+	position: relative;;
+	display: block;
+	width: $toolbar-width;
+	height: $toolbar-width;
+	margin-top: 1px;
+	
+	&:hover{
+		.tool-layer{
+			@include opacity(1);
+			@include scale(1);
+		}
+		.toolbar-icon{
+			top:-$toolbar-width;
+		}
+		.toolbar-text{
+			top: 0;
+		}
+	}
+}
+.toolbar-btn{
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: $toolbar-width;
+	height: $toolbar-width;	
+	overflow: hidden;
+}
+.toolbar-icon{
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: $toolbar-width;
+	height: $toolbar-width;
+	background-color: #d6d0d9;
+	font-size: 30px;
+	color: #fff;
+	text-align: center;
+	line-height: $toolbar-width;
+	@include transition(top 1s);
+}
+.toolbar-text{
+	position: absolute;
+	left: 0;
+	top: $toolbar-width;
+	width: $toolbar-width;
+	height: $toolbar-width;
+	background-color: #98a1a6;
+	padding-top: 12px;
+	font-size: 12px;
+	color: #fff;
+	text-align: center;
+	line-height:1.2;
+	@include transition(top 1s);
+}
+.tool-layer{
+	position: absolute;
+	right: $toolbar-width - 6;
+	bottom: -10px;
+	width: 172px;
+	background-image: url(../img/toolbar_img.png);
+	background-repeat: no-repeat;
+	@include opacity(0);
+	@include transform-origin(95% 95%);
+	@include scale(0.001);
+	@include transition(all 0.5s);
+}
+.weixin{
+	height: 212px;
+	background-position: 0 0;
+}
+.download{
+	height: 194px;
+	background-position: 0 -222px;
+}
